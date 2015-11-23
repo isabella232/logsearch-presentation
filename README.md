@@ -52,7 +52,7 @@ Using Logsearch for Cloudfoundry
 
 ## [ Multi-AZ ELK architecture ](#6)
 
-![Multi-AZ ELD](pics/multi-az.png =780x)
+![Multi-AZ ELD](pics/multi-az.png)
 
 ---
 
@@ -60,7 +60,7 @@ Using Logsearch for Cloudfoundry
 
 * Deployment size
 	* Totally 37 nodes among 3 Available Zones (AZ)
-	* Totally 9 parser nodes (c3.large VMS)
+	* Totally 9 parser nodes (c3.large VM)
 	* Totally 15 Elastic Search Nodes (r3.xlarge nodes)
 	* Totally storage size - 18T
 * Data size
@@ -71,19 +71,19 @@ Using Logsearch for Cloudfoundry
 
 ## [Listening PWS with ELK](#8)
 
-![Router get 502 Error](pics/router-502.png =780x)
+![Router get 502 Error](pics/router-502.png)
 
 ---
 	 
 ## [ Listening PWS with ELK ](#9)
 
-![App pushed](pics/app-puts.png =780x)
+![App pushed](pics/app-puts.png)
 
 ---
 
 ## [ Listening PWS with ELK ](#10)
 
-![App begin staging](pics/stage-begin.png =780x)
+![App begin staging](pics/stage-begin.png)
 
 ---
 
