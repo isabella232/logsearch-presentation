@@ -69,19 +69,19 @@ Using Logsearch for Cloudfoundry
 	
 ---
 
-## [Listening PWS with ELK](#8)
+## [Listening PWS with ELK - 1 ](#8)
 
 ![Router get 502 Error](pics/router-502.png)
 
 ---
 	 
-## [ Listening PWS with ELK ](#9)
+## [ Listening PWS with ELK - 2 ](#9)
 
 ![App pushed](pics/app-puts.png)
 
 ---
 
-## [ Listening PWS with ELK ](#10)
+## [ Listening PWS with ELK - 3 ](#10)
 
 ![App begin staging](pics/stage-begin.png)
 
