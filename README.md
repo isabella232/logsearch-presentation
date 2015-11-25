@@ -65,7 +65,7 @@ Using Logsearch for Cloudfoundry
 	* Totally storage size - 18T
 * Data size
 	* 18 million lines log per hour
-	* 27G data per hour	
+	* 27G indexed data per hour	
 	
 ---
 
