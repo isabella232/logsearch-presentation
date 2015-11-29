@@ -6,37 +6,59 @@ I can extend my Cloud Foundry platform with log analysis
 Using Logsearch for Cloudfoundry
 ```
 
----
-
-
-## [ Microservices - must be this tall to play ](#2)
-
-* Log and metric analysis required for continuous deployment
-
-
----
-
-## [ History ](#3)
-
-* Logsearch - an opensource project to deploy Elastic ELK stack with BOSH
-  * sponsored for 2 years by City Index (thank you!)
-* Logsearch for Cloud Foundry - an opensource Logsearch addon:
-  * Extracts, parses and dashboards for CF App and Platform logs and metrics
-  * Integrates with CF UAA to provide multi-tenant access control
-* ELK for Pivotal Cloud Foundry - a commerical tile that adds:
-  * Log parsing for Spring Cloud based microservices
-  * Additional focus on security and audit logs
-  * Support
+<br><br>
+<div align="middle">
+<table width="90%">
+<tr><td>
+<img src="pics/headshot-DavidLaing.png" width="100px" class="headshot">
+David Laing
+<small>Product Owner, Logsearch</small>
+</td>
+<td>
+<img src="pics/headshot-JackWu.png" width="100px" class="headshot">
+Jack Wu (吴疆)
+<small>Cloud Ops, Pivotal</small>
+</td></tr>
+</table>
+</div>
 
 ---
 
-## [ The Voice of CloudFoundry -- Loggrator ](#4)
+### [ Microservices - must be this tall ](#2)
 
-![Loggregator Diagram](pics/loggregator.png)
+* Operating distributed systems is _hard_
+	* Cloud Foundry platform
+	* Microservices running on Cloud Foundry
+* Centralised log and metric analysis lets you see what is going on
+* Should be part of the platform
 
 ---
+
+### [ Logsearch - adding ELK to CF platform ](#3)
+
+* ELK stack deployed by BOSH
+	* Running in production for 2 years
+	* Log processing pipeline -> Log search engine -> Visualization tool
+	* Linear scalability
+* Logsearch for Cloud Foundry adds tight integration into CF ecosystem
+  * Ingests all the logs ( and metrics )
+  * Extracts and enriches
+  * Zero configuration authentication and multitenant access control
+
+---
+
+## [ Log sources ](#4)
+
+0. Platform component logs from syslog forwarders 
+0. Platform metrics from CF Collector
+0. Deployment data from BOSH NATs
+0. App logs from Loggregator firehose
+
+---
+
 
 ## [ Listen the Voice -- ELK for CloudFoundry ](#5)
+
 
 * Log sources
 	* Syslog of CloudFoundry components
@@ -47,12 +69,14 @@ Using Logsearch for Cloudfoundry
 * Scalability
 	* storage - extend storage when necessary 
 	* computing - adding parser nodes when necessary 
-	
+
 ---
 
 ## [ Multi-AZ ELK architecture ](#6)
 
-![Multi-AZ ELD](pics/multi-az.png)
+<div align="middle">
+	<img src="pics/multi-az.png" style="background-color:white">
+</div>
 
 ---
 
@@ -66,40 +90,73 @@ Using Logsearch for Cloudfoundry
 * Data size
 	* 18 million lines log per hour
 	* 27G indexed data per hour	
-	
+
 ---
 
 ## [Listening PWS with ELK - 1 ](#8)
 
-![Router get 502 Error](pics/router-502.png)
+<div align="middle">
+	<img src="pics/router-502.png" alt="Router get 502 Error">
+</div>
 
 ---
-	 
+
 ## [ Listening PWS with ELK - 2 ](#9)
 
-![App pushed](pics/app-puts.png)
+<div align="middle">
+	<img src="pics/app-puts.png" alt="App pushed">
+</div>
 
 ---
 
 ## [ Listening PWS with ELK - 3 ](#10)
 
-![App begin staging](pics/stage-begin.png)
+<div align="middle">
+	<img src="pics/stage-begin.png" alt="App begin staging">
+</div>
 
 ---
 
+#### [ DEMO: BOSH Health Monitor Metrics ](#11)
 
-## [ BOSH Health Monitor Metrics ](#11)
-
-* Demo of BOSH Health Monitor metrics
-
----
-
-## [ Blue / Green deployment ](#12)
-
-* Demo of dicey-app blue/green deployment
+<div align="middle">
+	<img src="pics/Platform-InstanceMetrics.png">
+</div>
 
 ---
 
-## [ Cross Microservice Transaction Tracing ](#13)
+#### [ DEMO: Enhanced Blue / Green deployment ](#12)
 
-* Demo of cf-SpringBootTrader cross microservice log analysis
+<div align="middle">
+	<img src="pics/Enhanced-Green-Blue.png">
+</div>
+
+---
+
+## [ ELK for PCF tile ](#13)
+
+* Tile for Pivotal's Cloud Foundry distribution
+* Adds
+  * Support for Spring Cloud Microservices
+  * Focus on security and audit logs
+  * Commercial support
+
+---
+
+#### [ DEMO: Cross Microservice Transaction Tracing ](#13)
+
+<div align="middle">
+	<img src="pics/App-Trace-dashboard.png">
+</div>
+
+---
+
+## [ Wrap-up ](#14)
+
+* Log analysis enables operating distributed systems
+* Logsearch for Cloud Foundry <br>&nbsp;&nbsp;-> logs analysis for CF platform
+* ELK for PCF tile <br>&nbsp;&nbsp;-> commercial support with focus on Spring Cloud
+
+<div align="middle">
+	<img src="pics/blackboard-questions.jpg" height="250px">
+</div>
